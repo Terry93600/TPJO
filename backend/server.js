@@ -16,15 +16,17 @@ const app = express();
 // routage de l'application
 const router = express.Router();
 
+app.use('/', router);
 
 // dossier des ressources externes
-router.use(express.static("public"));
+// router.use(express.static("public"));
 
 // acceder a une propriete body d'une req dont les donné sont en json
 router.use(express.json());
 
 // appel des routeurs avec un préfixe
 router.use("/", publicRouter);
+// router.get('/', (req, res) => res.send('ok'));
 
 // création du serveur
 const server = https.createServer(options, app);

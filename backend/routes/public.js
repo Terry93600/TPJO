@@ -1,5 +1,6 @@
 // import
 import express from "express";
+import { index, sport } from "../controllers/publicController.js";
 
 // créer le routeur
 const publicRouter = express.Router();
@@ -11,7 +12,8 @@ const publicRouter = express.Router();
 		- middleware appelé par la route
 */
 
-// publicRouter.get("/", index);
+publicRouter.get("/", index);
+publicRouter.get("/sport", sport);
 
 // creer une route en poste recuperer les donnes| exemple:
 // publicRouter.post('/uneroute', uneroute);

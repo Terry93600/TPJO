@@ -2,12 +2,16 @@ import * as fs from "node:fs/promises";
 import https from "node:https";
 import express from "express";
 import publicRouter from "./routes/public.js";
+import * as dotenv from 'dotenv';
 
 // configuration du serveur
 const options = {
 	key: await fs.readFile("ca/key.pem"),
 	cert: await fs.readFile("ca/cert.pem"),
 };
+
+// dotenv.config();
+// process.env.terry
 
 
 // créer une application express

@@ -38,3 +38,10 @@ CREATE TABLE tpjo.medaille(
     FOREIGN KEY(athlete_id) REFERENCES athlete(id)
 );
 
+INSERT INTO tpjo.sport
+VALUES
+    (NULL, 'football', 'football.jpg'),
+    (NULL, 'natation', 'natation.jpg'),
+    (NULL, 'boxe', 'boxe.jpg'),
+    (NULL, "tir à l'arc", 'tir-arc.jpg')
+;

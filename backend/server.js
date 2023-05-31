@@ -29,7 +29,7 @@ app.use('/', router);
 router.use(express.json());
 
 // appel des routeurs avec un préfixe
-router.use("/", publicRouter);
+router.use("/api", publicRouter);
 // router.get('/', (req, res) => res.send('ok'));
 
 // création du serveur

@@ -15,8 +15,7 @@ CREATE TABLE tpjo.genre(
 
 CREATE TABLE tpjo.epreuves(
     id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    nom VARCHAR(50) NOT NULL,
-    sport_id TINYINT UNSIGNED,
+    name sport_id TINYINT UNSIGNED,
     genre_id TINYINT UNSIGNED,
     FOREIGN KEY(sport_id) REFERENCES sport(id),
     FOREIGN KEY(genre_id) REFERENCES genre(id)
@@ -44,4 +43,24 @@ VALUES
     (NULL, 'natation', 'natation.jpg'),
     (NULL, 'boxe', 'boxe.jpg'),
     (NULL, "tir à l'arc", 'tir-arc.jpg')
+;
+
+INSERT INTO tpjo.genre
+VALUES
+    (NULL, 'Femme'),
+    (NULL, 'Homme')
+;
+
+INSERT INTO tpjo.medaille
+VALUES
+    (NULL, 'Or'),
+    (NULL, 'Argent'),
+    (NULL, 'Bronze')
+;
+
+INSERT INTO tpjo.athlete
+VALUES
+    (NULL, 'Usain'),
+    (NULL, 'Terry'),
+    (NULL, 'Reshma'),
 ;

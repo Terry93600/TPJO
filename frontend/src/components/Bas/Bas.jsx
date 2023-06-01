@@ -1,6 +1,6 @@
-import "../footer/footer.css"
+import "./bas.css"
 
-const Footer = () => {
+const Bas = () => {
     return <>
     <footer>
         <article id="new">
@@ -38,4 +38,4 @@ const Footer = () => {
     </>
 }
 
-export default Footer;
+export default Bas;

@@ -1,6 +1,8 @@
 // import
 import express from "express";
-import { athlete, index, medailles, epreuve, genre} from "../controllers/publicController.js";
+import { athlete, index, medailles, epreuve, genre, titre} from "../controllers/publicController.js";
+
+
 
 // créer le routeur
 const publicRouter = express.Router();
@@ -13,9 +15,11 @@ const publicRouter = express.Router();
 */
 // get 
 publicRouter.get("/sports", index);
+
 publicRouter.get("/epreuves", epreuve);
 publicRouter.get("/medailles", medailles);
 publicRouter.get("/genre", genre);
+publicRouter.get("/titre", titre);
 
 
 // creer une route en poste recuperer les donnes | les athletes et leur genre:

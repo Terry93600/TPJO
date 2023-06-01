@@ -1,8 +1,11 @@
+
 import { getSports } from "../repositories/sportRepository.js";
 import { getAthlete } from "../repositories/athleteRepository.js";
 import { getMedailles } from "../repositories/medaillesRepository.js";
 import { getGenre } from "../repositories/genreRepository.js";
 import { getEpreuve } from "../repositories/epreuvesRepository.js";
+import { getTitre } from "../repositories/titreRepository.js";
+
 
 // index = homepage =  sports 
 const index = (req, res) => {
@@ -14,6 +17,7 @@ const index = (req, res) => {
         });
     });
 };
+
 
 const epreuve = (req, res) => {
     getEpreuve().then( data => {
@@ -45,8 +49,9 @@ const medailles = (req, res) => {
     });
 };
 
-const genre = (req, res) => {
-    getGenre().then( data => {
+
+const titre = (req, res) => {
+    getTitre().then( data => {
         return res.status(200).json({
             status: 200,
             message: "OK",
@@ -55,4 +60,5 @@ const genre = (req, res) => {
     });
 };
 
-export { index, athlete, medailles, epreuve, genre };
+export { index, athlete, medailles, epreuve, genre, titre };
+

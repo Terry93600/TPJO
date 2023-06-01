@@ -6,7 +6,7 @@ const getAthlete = async() => {
         SELECT athelete.*
         FROM tpjo.athelete;
     `;
-
+    
     try {
         const [results] = await dbConnection.execute(sql);
         // console.log(results);
@@ -15,6 +15,8 @@ const getAthlete = async() => {
         // console.log(error);
         return error;
     }
+
+    
 }
 
 export { getAthlete };

@@ -60,5 +60,15 @@ const titre = (req, res) => {
     });
 };
 
+const genre = (req, res) => {
+    getGenre().then( data => {
+        return res.status(200).json({
+            status: 200,
+            message: "OK",
+            data: data,
+        });
+    });
+};
+
 export { index, athlete, medailles, epreuve, genre, titre };
 

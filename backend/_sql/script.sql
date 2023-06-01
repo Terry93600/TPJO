@@ -1,6 +1,8 @@
 DROP DATABASE IF EXISTS tpjo;
 
 CREATE DATABASE tpjo;
+-- cette ligne permet de definir un encodage par defaut qui sait interpreter les caracteres speciaux (à é ç ...)
+ALTER DATABASE tpjo CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE tpjo.sport(
     id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,

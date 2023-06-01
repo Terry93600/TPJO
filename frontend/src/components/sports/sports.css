@@ -1,0 +1,22 @@
+article {
+    min-height: 60vh;
+    width: 100%;
+}
+
+h3 {
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 36%;
+}
+hr {
+    background: crimson;
+    border: 2px solid black;
+    margin-top: 320px;
+}
+
+
+p {
+    margin: 50px 10px 0px 20px;
+    min-height: 20vh;
+    font-size: 35px;
+}

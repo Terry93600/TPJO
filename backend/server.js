@@ -3,6 +3,7 @@ import https from "node:https";
 import express from "express";
 import publicRouter from "./routes/public.js";
 import * as dotenv from 'dotenv';
+import cors from 'cors';
 
 // configuration du serveur
 const options = {
@@ -17,6 +18,7 @@ const options = {
 // créer une application express
 const app = express();
 
+
 // routage de l'application
 const router = express.Router();
 
@@ -27,6 +29,8 @@ app.use('/', router);
 
 // acceder a une propriete body d'une req dont les donné sont en json
 router.use(express.json());
+router.use(cors());
+
 
 // appel des routeurs avec un préfixe
 router.use("/api", publicRouter);

@@ -2,6 +2,7 @@
 import './App.css'
 import Accueil from './components/accueil/Accueil';
 import Header from './components/my-header/Header.jsx';
+import Sports from './components/sports/Sports';
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
       
       <Header/>
       <Accueil/>
+      <Sports/>
       
     </>
   )

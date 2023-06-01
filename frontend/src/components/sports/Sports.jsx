@@ -1,48 +1,44 @@
 import "../sports/sports.css"
 
+import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
+import axios from "axios";
+
+
 const Sports = () => {
-    return <>
+
+    const [sport, setSport] = useState([]);
+
+    async function getAllSports() {
+    const response = await axios.get("https://localhost:3001/api/sports")
+        console.log('response', response.data.data)
+        setSport(response.data.data)
+    }
+// on a stocker la data dans usestate " sport"
+    
+    console.log('sport', sport)
+    useEffect(() => {
+        getAllSports();
+    }, [])
+    
+// on appel la data ici avec un map sur la BDD, le LINK ici il permet de changer l'url en fonction du sport sur lequel on click grace a la variable:
+    return (<>
     <hr />
-        <h3>28 sports olympiques</h3>
+        <h3>Les sports olympiques</h3>
         <article id="jeux">
-            <p id="nos-jeux">
-                <a href="#">Athlètisme,</a>
-                <a href="#">badminton,</a>
-                <a href="#">basketball,</a>
-                <a href="#">football,</a>
-                <a href="#">handball,</a>
-                <a href="#">trampoline,</a>
-                <a href="#">escrime,</a>
-                <a href="#">cyclisme,</a>
-                <a href="#">gymnastique,</a>
-                <a href="#">Athlètisme,</a>
-                <a href="#">badminton,</a>
-                <a href="#">basketball,</a>
-                <a href="#">football,</a>
-                <a href="#">handball,</a>
-                <a href="#">trampoline,</a>
-                <a href="#">escrime,</a>
-                <a href="#">cyclisme,</a>
-                <a href="#">gymnastique,</a>
-                <a href="#">haltérophilie,</a>
-                <a href="#">natation,</a>
-                <a href="#">golf,</a>
-                <a href="#">rugby,</a>
-                <a href="#">VTT,</a>
-                <a href="#">canoe,</a>
-                <a href="#">rythmiques,</a>
-                <a href="#">taekwondo,</a>
-                <a href="#">voile,</a>
-                <a href="#">volleyball,</a>
-                <a href="#">judo,</a>
-                <a href="#">hockey,</a>
-                <a href="#">natation,</a>
-                <a href="#">golf,</a>
-                <a href="#">rugby,</a>
-            </p>
+            {sport.map((value) => (
+                <p id="nos-jeux" key={crypto.randomUUID()}>
+                    <a href="#">
+                    <Link to={`/${value.name}/${value.id}`}>
+                            {`${value.name}`}
+                        </Link>
+                    </a>
+                </p>
+            )
+            )}
         </article>
     </>
+    )
 }
-
 
 export default Sports;

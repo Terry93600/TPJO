@@ -2,7 +2,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import Accueil from './components/accueil/Accueil';
-import CallSport from './components/callSport';
 import Footer from './components/footer/Footer';
 import Header from './components/my-header/Header.jsx';
 import Sports from './components/sports/Sports';
@@ -24,7 +23,7 @@ function App() {
       
       {/* ici on a creer la route et son chemin pour acceder aux donnees du backend qu'on a stocker dans un fichier React et qu'on importe ici :  */}
       <Routes>
-        <Route path="/" element={<CallSport/> } />
+        <Route path="/" element={<Sports/> } />
      </Routes>
       
     </>

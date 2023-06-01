@@ -81,6 +81,7 @@ VALUES
     (NULL, 'Houjdadji')
 ;
 
+-- table de jointure:
 INSERT INTO tpjo.titre
 VALUES
     (1, 1, 2),

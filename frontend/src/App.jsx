@@ -3,6 +3,7 @@ import './App.css'
 import Accueil from './components/accueil/Accueil';
 import Footer from './components/footer/Footer';
 import Header from './components/my-header/Header.jsx';
+import Sports from './components/sports/Sports';
 
 function App() {
   
@@ -10,11 +11,10 @@ function App() {
 
   return (
     <>
-      
       <Header/>
       <Accueil/>
-      <Footer/>
-      
+      <Sports/>
+      <Footer/>      
     </>
   )
 }

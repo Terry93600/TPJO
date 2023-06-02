@@ -1,4 +1,6 @@
-SELECT epreuve.name AS epreuve, sport.name AS sport, genre.name AS genre
+-- table de jointure entre la table sport et epreuves
+
+SELECT epreuve.name AS epreuves, sport.name AS sport, genre.name AS genre
 FROM tpjo.epreuve
 JOIN tpjo.sport
 ON sport.id = epreuve.sport_id

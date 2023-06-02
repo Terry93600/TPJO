@@ -18,6 +18,7 @@ const options = {
 // créer une application express
 const app = express();
 
+
 // routage de l'application
 const router = express.Router();
 
@@ -29,6 +30,7 @@ app.use('/', router);
 // acceder a une propriete body d'une req dont les donné sont en json
 router.use(express.json());
 router.use(cors());
+
 
 // appel des routeurs avec un préfixe
 router.use("/api", publicRouter);

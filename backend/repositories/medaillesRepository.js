@@ -1,7 +1,7 @@
 import dbConnection from "../service/db.js";
 
 
-const getResults = async() => {
+const getMedailles = async() => {
     const sql = `
         SELECT medaille.*
         FROM tpjo.medaille;
@@ -17,4 +17,4 @@ const getResults = async() => {
     }
 }
 
-export { getResults };
+export { getMedailles };

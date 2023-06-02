@@ -1,22 +1,31 @@
-article {
-    min-height: 60vh;
+#jeux {
     width: 100%;
 }
 
 h3 {
     font-size: 50px;
-    margin-top: 100px;
-    margin-left: 36%;
+    margin: 20px 0 10px 10%;
 }
 hr {
     background: crimson;
     border: 2px solid black;
-    margin-top: 320px;
+    margin-top: 50px;
 }
 
 
-p {
-    margin: 50px 10px 0px 20px;
-    min-height: 20vh;
-    font-size: 35px;
+#nos-jeux {
+    font-size: 30px;
+    width: 40%;
+    margin-left: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nos-jeux > a {
+    color: black;
+    text-decoration: underline;
+}
+
+#nos-jeux > a:hover {
+    color: goldenrod;
 }

@@ -8,12 +8,9 @@ import './App.css';
 // import SportsPage from './components/sportsPage/SportsPage';
 import Accueil from "./Page/Accueil";
 import Sportive from './Page/Sportive';
-
-
-
+import Professionnel from "./Page/Professionnel";
 
 // import router from './service/Router'
-
 
 function App() {
   
@@ -24,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/sports" element={<Sportive />} />
-        {/* <Route path="/sports" element={<SportsPage/> } /> */}
+        <Route path="/athlete" element={<Professionnel />} />
      </Routes>
       
     </>

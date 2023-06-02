@@ -8,7 +8,8 @@ const Header = () => {
             <a href="#"><img src="" alt="image accueil" /></a>
             <ul>
                 <li><Link to={"/sports"}>Sports</Link></li>
-                <li><a href="#">Athlètes</a></li>
+                <li><Link to={"/athlete"}>Athlètes</Link></li>
+                {/* <li><a href="#">Athlètes</a></li> */}
                 <li><a href="#">Epreuves</a></li>
             </ul>
         </nav>

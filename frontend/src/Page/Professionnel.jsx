@@ -1,23 +1,21 @@
 // import { useState } from 'react'
-import Sports from '../components/sports/Sports';
+import Athlete from '../components/athlete/athlete';
 import Footer from '../components/footer/Footer';
 import Header from '../components/my-header/Header';
-
-
 // import router from './service/Router'
 
 
-function Sportive() {
+function Professionnel() {
   
   // const [count, setCount] = useState(0)
 
   return (
     <>
       <Header/>
-      <Sports/>
-      <Footer/>
+      <Athlete/>
+      <Footer />
     </>
   )
 }
 
-export default Sportive
+export default Professionnel

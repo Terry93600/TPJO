@@ -20,4 +20,21 @@ const getAllsport = async () => {
     return response;
 }
 
-export { getAllsport };
+const getAllepreuve = async () => {
+    const url = "https://localhost:3001/api/epreuves";
+
+    const requestInfos = new Request(url, {
+        method: 'get',
+    });
+// Executer la requete:
+    const request = await fetch(requestInfos);
+
+// recuperer la reponse
+    const response = await request.json();
+    console.log('response', response )
+
+// return la response
+
+    return response;
+}
+export { getAllsport, getAllepreuve };

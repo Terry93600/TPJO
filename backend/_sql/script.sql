@@ -7,7 +7,7 @@ ALTER DATABASE tpjo CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE TABLE tpjo.sport(
     id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
-    picto VARCHAR(50) NOT NULL
+    picto TEXT NOT NULL
 );
 
 CREATE TABLE tpjo.genre(
@@ -49,7 +49,7 @@ VALUES
     (NULL, 'football', 'football.jpg'),
     (NULL, 'natation', 'natation.jpg'),
     (NULL, 'boxe', 'boxe.jpg'),
-    (NULL, "tir à l'arc", 'tir-arc.jpg')
+    (NULL, "tir à l'arc", 'arc.ij')
 ;
 
 INSERT INTO tpjo.genre

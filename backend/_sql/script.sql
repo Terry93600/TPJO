@@ -19,7 +19,7 @@ CREATE TABLE tpjo.epreuve(
     id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
     sport_id TINYINT UNSIGNED,
-    genre_id TINYINT UNSIGNED,
+    -- genre_id TINYINT UNSIGNED,
     FOREIGN KEY(sport_id) REFERENCES sport(id),
     FOREIGN KEY(genre_id) REFERENCES genre(id)
 );
@@ -38,10 +38,10 @@ CREATE TABLE tpjo.titre(
     athlete_id TINYINT UNSIGNED,
     medaille_id TINYINT UNSIGNED,
     epreuve_id TINYINT UNSIGNED,
+    PRIMARY KEY(athlete_id, medaille_id, epreuve_id),
     FOREIGN KEY(athlete_id) REFERENCES athlete(id),
     FOREIGN KEY(medaille_id) REFERENCES medaille(id),
-    FOREIGN KEY(epreuve_id) REFERENCES epreuve(id),
-    PRIMARY KEY(athlete_id, medaille_id, epreuve_id)
+    FOREIGN KEY(epreuve_id) REFERENCES epreuve(id)
 );
 
 INSERT INTO tpjo.sport
@@ -51,6 +51,7 @@ VALUES
     (NULL, 'boxe', 'boxe.jpg'),
     (NULL, "tir à l'arc", 'arc.ij')
 ;
+
 
 INSERT INTO tpjo.genre
 VALUES
@@ -63,7 +64,7 @@ VALUES
     (NULL, 'Individuel', 3, 1),
     (NULL, 'Individuel', 3, 2),
     (NULL, 'Par équipe', 3, 1),
-    (NULL, 'Par équipe', 3, 2)
+    (NULL, 'Par équipe', 3, 2),
 ;
 
 

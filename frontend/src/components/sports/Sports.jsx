@@ -59,7 +59,6 @@ const Sports = () => {
             };
 
     return (<>
-        <hr />
 
         <h3>Les sports olympiques</h3>
         <form className="form-add" method="post" onSubmit={handleSubmit}>

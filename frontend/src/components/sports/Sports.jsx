@@ -29,8 +29,6 @@ const Sports = () => {
 
     });
     
-        
-    
 
             // on a stocker la data dans usestate " sport"
             console.log(requestInfosApi, 'api');
@@ -46,6 +44,7 @@ const Sports = () => {
                 const formData = new FormData(e.currentTarget);
                 const data = Object.fromEntries(formData);
                 
+                console.log(handleSubmit(), "clik")
                 const requestInfos = new Request('https://localhost:3001/api/sports', {
                     method: 'POST',
                     headers: {
@@ -75,11 +74,13 @@ const Sports = () => {
             {sport.map((value) => (
                 <p id="nos-jeux" key={crypto.randomUUID()}>
                     <Link to={`/${value.name}/${value.id}`}>
-                            {`${value.name}`}
+                        {`${value.name}`} 
                         </Link>
+                        <img src={value.picto} />
                 </p>
             )
-            )}
+            )
+            }
         </article>
     </>
     )
